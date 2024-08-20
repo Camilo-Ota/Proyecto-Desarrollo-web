@@ -11,6 +11,9 @@ body{
     overflow-x: hidden;
 
 }
+body h1{
+    font-family:'Dancing Script';
+}
 
 #inicio{  /* se usa un # ya que estamos tomando el ID*/
     position: relative;
@@ -28,7 +31,7 @@ body{
     left:0;
     width: 100%;
     height: 100%;
-    background-image: url(/imagenes/fotoresturante.jpg);
+    background-image: url(./imagenes/fotoresturante.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -40,8 +43,9 @@ body{
 }
 #inicio_contenido h1{
     color: white;
-    font-size: 2.8rem;
+    font-size: 4.5rem;
     text-shadow: 2px 2px 2px #000;
+
 }
 #inicio_contenido h2{
     color: white;
@@ -54,14 +58,13 @@ body{
 #inicio_contenido a{
     color: white;
     padding: 3px 20px 3px 20px;
-    border: 1px solid orangered;
-    background: rgb(0,0, 0.6);
+    border: 1px solid rgb(255, 255, 255);
     font-size: 1.5rem;
     text-decoration: none;
     border-radius: 20px;
 }
 #inicio_contenido a:hover{
-    background: orangered;
+    background: rgb(212, 57, 0);
 }
 #header{
     position: fixed ;
@@ -79,7 +82,7 @@ body{
     color: orange;
     font-size: 1.8rem;
     text-shadow: 2px 2px 2px #000;
-    font-family: cursive;
+    font-family:'Dancing Script';
 }
 
 #barranavegacion ul{
