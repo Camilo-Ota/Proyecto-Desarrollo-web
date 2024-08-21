@@ -5,28 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Menu</title>
     <link rel="stylesheet" href="entradas.css">
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <header>
-        <h1>UrbanBites</h1>
+        <div id="header">
+            <nav id="barranavegacion">
+                <h1> Nombre del restaurante</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="entradas.html">Entradas</a></li>
+                    <li><a href="#">Platos Principales</a></li>
+                    <li><a href="#">Bebidas</a></li>
+                    <li><a href="#">Postres</a></li>
+                    <li><a href="#">Equipo desarrollador</a></li>
+                </ul>
+            </nav>
+            <div id="barranavegacion_celular">
+                  <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="entradas.html">Entradas</a></li>
+                    <li><a href="#">Platos Principales</a></li>
+                    <li><a href="#">Bebidas</a></li>
+                    <li><a href="#">Postres</a></li>
+                    <li><a href="#">Equipo desarrollador</a></li>
+                </ul>
+    
+            </div>
+        </div>
     </header>
     <main>
         <section class="menu">
             <h2>Entradas</h2>
             <div class="grid">
                 <div class="grid-item">
-                    <h3>Bruschetta</h3>
-                    <p> Toasted bread with fresh tomatoes and basil</p>
-                    <p>$8.99</p>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <div class="img-container">
+                        <img src="./imagenes/rollitos.jpg" alt="Rollitos">
+                    </div>
+                    <h3>Rollitos de primavera</h3>
+                    <p>Rollo elaborado de una pasta relleno de diferentes verduras picadas</p>
+                    <p>$5.000</p>
+                    <button class="add-to-cart">Añadir a la carta</button>
                 </div>
                 <div class="grid-item">
-                    <h3>Calamari</h3>
-                    <p> Fried squid rings served with tangy marinara sauce</p>
-                    <p>$10.99</p>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <div class="img-container">
+                        <img src="./imagenes/aritos.jpg" alt="Aritos">
+                    </div>
+                    <h3>Aros de cebolla</h3>
+                    <p>Cebollas cortadas en forma de anillo rebozados en harina con algo de levadura y fritos en aceite</p>
+                    <p>$7.000</p>
+                    <button class="add-to-cart">Añadir a la carta</button>
                 </div>
-                <!-- Add more menu items here -->
+                <div class="grid-item">
+                    <div class="img-container">
+                        <img src="./imagenes/sticks.jpeg" alt="Palitos">
+                    </div>
+                    <h3>Palitos de mozzarella</h3>
+                    <p>Trozos alargados de queso mozzarella empanados y fritos</p>
+                    <p>$10.000</p>
+                    <button class="add-to-cart">Añadir a la carta</button>
+                </div>
+                <div class="grid-item">
+                    <h3>Nachos</h3>
+                    <div class="img-container">
+                        <img src="./imagenes/nachos.jfif" alt="Nachos">
+                    </div>
+                    <p>Trozos de tortilla de maíz fritos, cubiertos de queso, chiles, tomates, cebollas y carne molida</p>
+                    <p>$14.000</p>
+                    <button class="add-to-cart">Añadir a la carta</button>
+                </div>
+                <div class="grid-item">
+                    <div class="img-container">
+                        <img src="./imagenes/jalapeño.jpg" alt="Jalapeños">
+                    </div>
+                    <h3>Jalapeño Poppers</h3>
+                    <p>Chiles jalapeños ahuecados fritos, rellenos de queso, especias y carne molida</p>
+                    <p>$11.000</p>
+                    <button class="add-to-cart">Añadir a la carta</button>
+                </div>
+                <div class="grid-item">
+                    <div class="img-container">
+                        <img src="./imagenes/dumplings.JPG" alt="Dumplings">
+                    </div>
+                    <h3>Dumplings</h3>
+                    <p>Trozos de masa rellenos de carne o pescado, cocidos o horneados</p>
+                    <p>$12.000</p>
+                    <button class="add-to-cart">Añadir a la carta</button>
+                </div>
             </div>
         </section>
         <!-- Add more menu sections here -->

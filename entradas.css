@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -23,14 +28,31 @@ header {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
+    grid-template-rows: repeat(3, auto); /* Tres filas automáticas en altura */
+    gap: 20px; /* Espacio entre los elementos de la cuadrícula */
 }
 
 .grid-item {
     padding: 1em;
     border: 1px solid #ccc;
     text-align: center;
+    background-color: #fff; /* Fondo blanco para los ítems */
+    border-radius: 8px; /* Bordes redondeados para los ítems */
+}
+
+.img-container {
+    width: 100%;
+    height: 200px; /* Altura fija para las imágenes */
+    overflow: hidden; /* Oculta el desbordamiento de la imagen */
+    margin-bottom: 10px; /* Espacio debajo de la imagen */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.img-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor */
 }
 
 .grid-item h3 {
@@ -44,6 +66,7 @@ header {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 5px; /* Bordes redondeados para el botón */
 }
 
 .add-to-cart:hover {
@@ -84,6 +107,7 @@ header {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 5px; /* Bordes redondeados para el botón */
 }
 
 #checkout:hover {
@@ -93,7 +117,7 @@ header {
 /* Responsive design for mobile devices */
 @media only screen and (max-width: 600px) {
     .grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Una columna en dispositivos móviles */
     }
     .grid-item {
         width: 100%;
