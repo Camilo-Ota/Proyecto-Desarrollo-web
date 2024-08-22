@@ -1,4 +1,10 @@
 /* HEADER FIJO */
+#barranavegacion li a img{
+    height: 25px;
+}
+#barranavegacion_celular li a img{
+    height: 25px;
+}
 #barranavegacion {
     display: flex;
     justify-content: space-around;
