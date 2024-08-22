@@ -23,13 +23,15 @@
                     <li><a href="equipo.html">Equipo desarrollador</a></li>
                 </ul>
                 <div id="cart-icon" style="cursor: pointer;">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312" />
                     </svg>
                 </div>
             </nav>
             <div id="barranavegacion_celular">
-                  <ul>
+                <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="entradas.html">Entradas</a></li>
                     <li><a href="principales.html">Platos Principales</a></li>
@@ -37,7 +39,7 @@
                     <li><a href="postres.html">Postres</a></li>
                     <li><a href="equipo.html">Equipo desarrollador</a></li>
                 </ul>
-    
+
             </div>
         </div>
     </header>
@@ -52,7 +54,8 @@
                     <h3>Hamburguesa doble queso</h3>
                     <p>Hamburguesa doble queso cheddar con tocino, carne, pepinillos y tomate</p>
                     <p>$22.000</p>
-                    <button class="add-to-cart" data-id="1" data-name="Hamburguesa doble queso" data-price="22000">Añadir al carrito</button>
+                    <button class="add-to-cart" data-id="1" data-name="Hamburguesa doble queso"
+                        data-price="22000">Añadir al carrito</button>
                 </div>
                 <div class="grid-item">
                     <div class="img-container">
@@ -61,7 +64,8 @@
                     <h3>Hamburguesa de pollo</h3>
                     <p>Hamburguesa de pollo apanado con lechuga, pepinillos, tomates y queso cheddar</p>
                     <p>$19.000</p>
-                    <button class="add-to-cart" data-id="2" data-name="Hamburguesa de pollo" data-price="19000">Añadir al carrito</button>
+                    <button class="add-to-cart" data-id="2" data-name="Hamburguesa de pollo" data-price="19000">Añadir
+                        al carrito</button>
                 </div>
                 <div class="grid-item">
                     <div class="img-container">
@@ -70,7 +74,8 @@
                     <h3>Hamburguesa doble carne</h3>
                     <p>Hamburguesa doble carne con queso cheddar, carne, pepinillos y tomate</p>
                     <p>$23.000</p>
-                    <button class="add-to-cart" data-id="3" data-name="Hamburguesa doble carne" data-price="23000">Añadir al carrito</button>
+                    <button class="add-to-cart" data-id="3" data-name="Hamburguesa doble carne"
+                        data-price="23000">Añadir al carrito</button>
                 </div>
                 <div class="grid-item">
                     <div class="img-container">
@@ -79,7 +84,8 @@
                     <h3>Pizza de pollo y champiñones</h3>
                     <p>Combinación de pollo con champiñones</p>
                     <p>$21.000</p>
-                    <button class="add-to-cart" data-id="4" data-name="Pizza de pollo y champiñones" data-price="21000">Añadir al carrito</button>
+                    <button class="add-to-cart" data-id="4" data-name="Pizza de pollo y champiñones"
+                        data-price="21000">Añadir al carrito</button>
                 </div>
                 <div class="grid-item">
                     <div class="img-container">
@@ -88,7 +94,8 @@
                     <h3>Pizza hawaiana</h3>
                     <p>Combinación salada y dulce de piña y jamón</p>
                     <p>$18.000</p>
-                    <button class="add-to-cart" data-id="5" data-name="Pizza hawaiana" data-price="18000">Añadir al carrito</button>
+                    <button class="add-to-cart" data-id="5" data-name="Pizza hawaiana" data-price="18000">Añadir al
+                        carrito</button>
                 </div>
                 <div class="grid-item">
                     <div class="img-container">
@@ -97,7 +104,8 @@
                     <h3>Pizza de pepperoni</h3>
                     <p>Clásica con rodajas de pepperoni crujiente</p>
                     <p>$19.000</p>
-                    <button class="add-to-cart" data-id="6" data-name="Pizza de pepperoni" data-price="19000">Añadir al carrito</button>
+                    <button class="add-to-cart" data-id="6" data-name="Pizza de pepperoni" data-price="19000">Añadir al
+                        carrito</button>
                 </div>
             </div>
         </section>
@@ -109,7 +117,11 @@
                     <!-- Aquí se mostrarán los elementos del carrito -->
                 </div>
                 <div id="cart-total">
-                    <p>Total: $<span id="total-amount">0</span></p>
+                    <div id="cart-total">
+                        <p><strong>Total:</strong></p>
+                        <p id="total-amount">$0</p>
+                    </div>
+
                 </div>
                 <button id="close-cart">Cerrar</button>
             </div>

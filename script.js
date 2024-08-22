@@ -4,24 +4,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartWindow = document.getElementById('cart-window');
     const cartIcon = document.getElementById('cart-icon');
     const closeCartButton = document.getElementById('close-cart');
-    const clearCartButton = document.getElementById('clear-cart');
-
-    // Función para calcular el total del carrito
-    function calculateTotal() {
-        const cartItems = document.querySelectorAll('#cart-items .cart-item');
-        let total = 0;
-        cartItems.forEach(item => {
-            const price = parseFloat(item.querySelector('p').textContent.split('$')[1].split(' ')[0]);
-            const quantity = parseInt(item.querySelector('.quantity').textContent);
-            total += price * quantity;
-        });
-        return total;
-    }
 
     // Función para actualizar el carrito en la ventana emergente
     function updateCartUI() {
-        const total = calculateTotal();
+        const cart = getCart();
+        cartElement.innerHTML = '';
+        cart.forEach((item) => {
+            const cartItem = document.createElement('div');
+            cartItem.innerHTML = `
+                <p>${item.name} - $${item.price}</p>
+                <button class="remove-from-cart" data-id="${item.id}">Eliminar</button>
+            `;
+            cartElement.appendChild(cartItem);
+        });
+        const total = calculateTotal(cart);
         totalElement.textContent = total;
+    }
+
+    function calculateTotal(cart) {
+        return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
     }
 
     // Mostrar el carrito al hacer clic en el ícono
@@ -45,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const item = {
                 id: e.target.dataset.id,
                 name: e.target.dataset.name,
-                price: parseFloat(e.target.dataset.price),
+                price: e.target.dataset.price,
             };
             addToCart(item);
             updateCartUI();
@@ -55,14 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Agregar listener para eliminar elementos del carrito
     cartElement.addEventListener('click', (e) => {
         if (e.target.classList.contains('remove-from-cart')) {
-            removeFromCart(e.target.dataset.id);
+            const item = {
+                id: e.target.dataset.id,
+            };
+            removeFromCart(item);
             updateCartUI();
         }
-    });
-
-    // Agregar listener para vaciar el carrito
-    clearCartButton.addEventListener('click', () => {
-        clearCart();
-        updateCartUI();
     });
 });
