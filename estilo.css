@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
 }
+
+#barranavegacion li a img{
+    height: 25px;
+}
 /* Esta version snciona  */
 html{
     font-size: 100%;
