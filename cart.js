@@ -40,3 +40,7 @@ function clearCart() {
     const cartItems = document.getElementById('cart-items');
     cartItems.innerHTML = '';
 }
+
+
+
+
