@@ -7,10 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCartUI();
 
     function updateCartUI() {
-        const cartElement = document.getElementById('cart-items');
-        const totalElement = document.getElementById('total-amount');
         const cart = getCart(); // Obtener el carrito desde localStorage
-    
         cartElement.innerHTML = '';
         cart.forEach((item) => {
             const cartItem = document.createElement('div');
@@ -48,10 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Agregar listener para agregar elementos al carrito
-    const addToCartButtons = document.querySelectorAll('.add-to-cart');
-
-    addToCartButtons.forEach((button) => {
-        button.addEventListener('click', (e) => {
+    document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('add-to-cart')) {
             const item = {
                 id: e.target.dataset.id,
                 name: e.target.dataset.name,
@@ -59,8 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
             };
             addToCart(item);
             updateCartUI();
-        });
+        }
     });
+    
 
     // Agregar listener para eliminar elementos del carrito
     cartElement.addEventListener('click', (e) => {
