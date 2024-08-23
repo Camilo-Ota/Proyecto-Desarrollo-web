@@ -14,7 +14,7 @@
     color: orange;
     font-size: 1.8rem;
     text-shadow: 2px 2px 2px #000;
-    font-family: 'Dancing Script';
+    font-family: 'Dancing Script',cursive;
 }
 
 #barranavegacion ul {
@@ -222,4 +222,214 @@ header {
     html {
         font-size: 90%;
     }
+}
+
+
+
+
+.carrito{
+    border: 1px solid #666;
+    width: 35%;
+    margin-top: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: auto;
+    position: sticky !important;
+    top: 0;
+    transition: .3s;
+    /* Estilos para ocultar */
+    margin-right: -100%;
+    opacity: 0;
+}
+.carrito .header-carrito{
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+.carrito .carrito-item{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    position: relative;
+    border-bottom: 1px solid #666;
+    padding: 20px;
+}
+.carrito .carrito-item img{
+    margin-right: 20px;
+}
+.carrito .carrito-item .carrito-item-titulo{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.carrito .carrito-item .selector-cantidad{
+    display: inline-block;
+    margin-right: 25px;
+}
+.carrito .carrito-item .carrito-item-cantidad{
+    border: none;
+    font-size: 18px;
+    background-color: transparent;
+    display: inline-block;
+    width:30px;
+    padding: 5px;
+    text-align: center;
+}
+.carrito .carrito-item .selector-cantidad i{
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+.carrito .carrito-item .carrito-item-precio{
+    font-weight: bold;
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.carrito .carrito-item .btn-eliminar{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: #000;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #000;
+    cursor: pointer;
+    display: block;
+    background: transparent;
+    z-index: 20;
+}
+.carrito .carrito-item .btn-eliminar i{
+    pointer-events: none;
+}
+
+.carrito-total{
+    background-color: #f3f3f3;
+    padding: 30px;
+}
+.carrito-total .fila{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.carrito-total .btn-pagar{
+    display: block;
+    width: 100%;
+    border: none;
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+.carrito-total .btn-pagar:hover{
+    scale: 1.05;
+}
+
+/* Media Query para pantallas pequeñas */
+
+@media (max-width: 768px) {
+    .carrito {
+        width: 50%; 
+    }
+    .carrito .header-carrito {
+        padding: 20px 0; 
+    }
+    .carrito .carrito-item {
+        padding: 15px; 
+    }
+    .carrito .carrito-item .carrito-item-titulo {
+        font-size: 16px; 
+    }
+    .carrito .carrito-item .carrito-item-precio {
+        font-size: 16px;
+    }
+    .carrito-total {
+        padding: 20px; 
+    }
+    .carrito-total .btn-pagar {
+        font-size: 16px;
+        padding: 15px; 
+    }
+}
+
+/* Media Query para pantallas aún más pequeñas */
+@media (max-width: 480px) {
+    .carrito {
+        width: 70%; /* Aumenta el ancho a 70% para pantallas muy pequeñas */
+    }
+    .carrito .header-carrito {
+        padding: 15px 0; /* Reduce aún más el padding en el encabezado */
+    }
+    .carrito .carrito-item {
+        padding: 10px; /* Reduce aún más el padding en los ítems del carrito */
+    }
+    .carrito .carrito-item .carrito-item-titulo {
+        font-size: 14px; /* Reduce aún más el tamaño de la fuente del título del ítem */
+    }
+    .carrito .carrito-item .carrito-item-precio {
+        font-size: 14px; /* Reduce aún más el tamaño de la fuente del precio del ítem */
+    }
+    .carrito-total {
+        padding: 15px; /* Reduce aún más el padding en el total del carrito */
+    }
+    .carrito-total .btn-pagar {
+        font-size: 14px; /* Reduce aún más el tamaño de la fuente del botón de pagar */
+        padding: 10px; /* Reduce aún más el padding del botón de pagar */
+    }
+}
+
+#Equipoquedesarrollo h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.equipo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+    gap: 20px; /* Espacio entre los elementos */
+    max-width: 800px; /* Ancho máximo de la galería */
+    margin: 0 auto; /* Centra la galería en la página */
+}
+
+.item {
+    text-align: center; /* Centra el contenido de cada elemento */
+    padding: 10px; /* Añade algo de espacio alrededor de cada item */
+    border-radius: 20px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Fondo claro */
+}
+
+.item img {
+    max-width: 60%; 
+    height: auto; 
+}
+
+.item h3 {
+    margin: 10px 0 5px 0; /* Espaciado entre el nombre y la imagen */
+    font-size: 1.2em; /* Tamaño de la fuente del nombre */
+}
+
+.item p {
+    font-size: 0.9em; /* Tamaño de la fuente de la descripción */
+    color: #666; 
+    margin: 5px 0; 
 }
