@@ -217,3 +217,39 @@ header {
         font-size: 90%;
     }
 }
+
+#Equipoquedesarrollo h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.equipo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+    gap: 20px; /* Espacio entre los elementos */
+    max-width: 800px; /* Ancho máximo de la galería */
+    margin: 0 auto; /* Centra la galería en la página */
+}
+
+.item {
+    text-align: center; /* Centra el contenido de cada elemento */
+    padding: 10px; /* Añade algo de espacio alrededor de cada item */
+    border-radius: 20px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Fondo claro */
+}
+
+.item img {
+    max-width: 60%; 
+    height: auto; 
+}
+
+.item h3 {
+    margin: 10px 0 5px 0; /* Espaciado entre el nombre y la imagen */
+    font-size: 1.2em; /* Tamaño de la fuente del nombre */
+}
+
+.item p {
+    font-size: 0.9em; /* Tamaño de la fuente de la descripción */
+    color: #666; 
+    margin: 5px 0; 
+}
