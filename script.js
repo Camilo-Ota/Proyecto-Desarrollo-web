@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartWindow = document.getElementById('cart-window');
     const cartIcon = document.getElementById('cart-icon');
     const closeCartButton = document.getElementById('close-cart');
+    updateCartUI();
 
     function updateCartUI() {
         const cartElement = document.getElementById('cart-items');

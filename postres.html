@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Menu</title>
     <link rel="stylesheet" href="cuadricula.css">
+    <link rel="stylesheet" href="carrito.css">
 </head>
 <body>
     <header>
@@ -66,8 +67,25 @@
                 </div>
             </div>
         </section>
-        <!-- Add more menu sections here -->
+
+        <div id="cart-window" class="hidden">
+            <div id="cart">
+                <h2>Carrito de compras</h2>
+                <div id="cart-items">
+                    
+                </div>
+                <div id="cart-total">
+                    <div id="cart-total">
+                        <p><strong>Total</strong></p>
+                        <p id="total-amount">$0</p>
+                    </div>
+                    
+                </div>
+                <button id="close-cart">Cerrar</button>
+            </div>
+        </div>
     </main>
     <script src="script.js"></script>
+    <script src="cart.js"></script>
 </body>
 </html>
